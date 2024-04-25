@@ -1,7 +1,7 @@
 :root {
   --dark-grey-blue: hsl(217, 19%, 35%);
   --desat-blue: hsl(214, 17%, 51%);
-  --grey-blue: hsl(212, 23%, 69%);
+  --grey-blue: #9eafc2;
   --light-grey-blue: hsl(210, 46%, 95%)
 }
 
@@ -23,8 +23,8 @@ body {
 
 .card {
   display: flex;
-  background-color: white;
-  border: 1px solid #bacdd8;
+  background-color: hsl(0, 0%, 100%);
+  /* background-color: var(--dark-grey-blue); */
   border-radius: 12px;
   overflow: hidden;
   /* outline: 1px solid red; */
@@ -34,7 +34,7 @@ body {
 .card-img {
   width: 100%;
   max-width: 600px;
-  height: 250px;
+  /* height: 100%; */
   object-fit: cover;
 }
 
@@ -59,6 +59,7 @@ p {
 .avatar-section {
   display: flex;
   justify-content: start;
+  /* display: none; */
 }
 
 .avatar-img {
@@ -84,9 +85,44 @@ p {
   border-radius: 50px;
 }
 
-.attribution {
+.share-bar {
+  background-color: var(--dark-grey-blue);
+  display: flex;
+  padding: 20px 30px;
+  justify-content: start;
+  align-items: center;
+}
+
+.share {
+  color: var(--desat-blue);
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.share-bar>div {
   font-size: 11px;
   text-align: center;
+}
+
+.share-bar>*:not(:last-child) {
+  margin-right: 15px;
+}
+
+.share-icon {
+  margin-left: auto;
+  background-color: var(--grey-blue);
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  align-items: center;
+}
+
+.inactive {
+  display: none;
 }
 
 .attribution a {
@@ -96,5 +132,9 @@ p {
 @media (max-width: 1220px) {
   .card {
     flex-direction: column;
+  }
+
+  .card-img {
+    height: 250px;
   }
 }
