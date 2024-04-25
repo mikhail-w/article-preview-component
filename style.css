@@ -17,6 +17,7 @@ body {
 
 .container {
   max-width: 50%;
+  min-width: 300px;
   margin: 20vh auto;
 }
 
@@ -25,13 +26,14 @@ body {
   background-color: white;
   border: 1px solid #bacdd8;
   border-radius: 12px;
+  overflow: hidden;
   /* outline: 1px solid red; */
   /* flex-wrap: wrap; */
 }
 
 .card-img {
   width: 100%;
-  max-width: 300px;
+  max-width: 600px;
   height: 250px;
   object-fit: cover;
 }
@@ -89,4 +91,10 @@ p {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1220px) {
+  .card {
+    flex-direction: column;
+  }
 }
